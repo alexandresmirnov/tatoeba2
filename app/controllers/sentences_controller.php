@@ -847,6 +847,9 @@ class SentencesController extends AppController
         $notTranslatedInto,
         $filterAudioOnly = "indifferent"
     ) {
+        $this->render('/pages/page_disabled');
+        return;
+
         // TODO This is a hack. We need to find out how to make
         // a form in contribute.ctp that directly forges a CakePHP-compliant URL
         if (isset($_POST['data']['Sentence']['into'])) {
